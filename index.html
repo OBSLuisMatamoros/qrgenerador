@@ -51,14 +51,20 @@
       <div class="tab-pane fade show active" id="tab-text" role="tabpanel">
         <input type="text" class="form-control" id="qrText" placeholder="Texto o URL"
           value="https://qrgenerador-weld.vercel.app/">
+        <label for="qrText" style="font-size: 8px; text-align: center;padding-left: 10px;">Ingrese su texto o la
+          dirección URL de la pagina.</label>
       </div>
 
       <div class="tab-pane fade" id="tab-color" role="tabpanel">
         <input type="color" class="form-control form-control-color" id="qrColor" value="#000000" title="Color QR">
+        <label for="qrColor" style="font-size: 8px; text-align: center;padding-left: 10px;">Seleccione el color
+          principal del QR</label>
       </div>
 
       <div class="tab-pane fade" id="tab-bg" role="tabpanel">
         <input type="color" class="form-control form-control-color" id="bgColor" value="#ffffff" title="Color fondo">
+        <label for="bgColor" style="font-size: 8px; text-align: center;padding-left: 10px;">Seleccione el color de fondo
+          del QR</label>
       </div>
 
       <div class="tab-pane fade" id="tab-style" role="tabpanel">
@@ -70,6 +76,8 @@
           <option value="classy-rounded">Elegante redondeado</option>
           <option value="extra-rounded">Extra redondeado</option>
         </select>
+        <label for="dotStyle" style="font-size: 8px; text-align: center;padding-left: 10px;">Seleccione la forma de los
+          puntos del QR</label>
       </div>
 
       <div class="tab-pane fade" id="tab-corners" role="tabpanel">
@@ -80,20 +88,32 @@
           <option value="classy">Elegante</option>
           <option value="classy-rounded">Elegante redondeado</option>
         </select>
+        <label for="cornerStyle" style="font-size: 8px; text-align: center;padding-left: 10px;">Seleccione la forma de
+          las esquinas del QR</label>
       </div>
 
       <div class="tab-pane fade" id="tab-size" role="tabpanel">
         <input type="number" class="form-control" id="qrSize" placeholder="Tamaño en px" value="300" min="100"
           max="1000" step="50">
+        <label for="cornerStyle" style="font-size: 8px; text-align: center;padding-left: 10px;">Tamaño en pixeles(px)
+          del QR a mostrar en la página. El tamaño de datos se ajusta automáticamente.</label>
       </div>
 
       <div class="tab-pane fade" id="tab-logo" role="tabpanel">
         <input type="file" class="form-control" id="qrLogo" accept="image/*">
+        <label for="qrLogo" style="font-size: 8px; text-align: center;padding-left: 10px;">Logo o imagen del centro del
+          QR, si no quiere mostrar ninguna dejar vacio.</label>
+        <div>
+          <div class="form-check form-switch my-1 ms">
+            <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+            <label class="form-check-label" for="mySwitch">Mostrar logo por defecto</label>
+          </div>
+        </div>
       </div>
 
     </div>
 
-    <!-- Visualización y descarga del código QR -->
+    <!-- Visualización del código QR -->
     <div class="codigo">
       <div id="qr-code"></div>
     </div>
